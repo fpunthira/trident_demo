@@ -1,0 +1,92 @@
+
+###### sc-basic.yaml
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: basic
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "ontap-nas"
+
+###### pvc-basic.yaml
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: basic
+  annotations:
+    volume.beta.kubernetes.io/storage-class: basic
+    trident.netapp.io/exportPolicy: "test"
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+
+##### pvc-import-basic.yaml
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: basic
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: basic
+
+##### import pvc command 
+
+tridentctl import volume BackendForNasCvoDR  trident_pvc_ab04b996_016a_485e_8c5e_9ed5cc931e8e_copy -f pvc-import.yaml -n trident
+
+
+##### deployment.app.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      volumes:
+      - name: task-pv-storage
+        persistentVolumeClaim:
+          claimName: basic
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: task-pv-storage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: nginx
