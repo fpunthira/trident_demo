@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-trident
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-trident
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-trident
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: nginx
+      - name: nginx-trident
         image: nginx
         resources:
           requests:
@@ -33,9 +33,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-trident
 spec:
   ports:
   - port: 80
   selector:
-    app: nginx
+    app: nginx-trident
