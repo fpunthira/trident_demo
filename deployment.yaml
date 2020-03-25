@@ -2,25 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-trident
+  name: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-trident
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx-trident
+        app: nginx
     spec:
-      volumes:
-      - name: task-pv-storage
-        persistentVolumeClaim:
-          claimName: basic-san
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: nginx-trident
+      - name: nginx
         image: nginx
         resources:
           requests:
@@ -31,18 +27,15 @@ spec:
             memory: 256Mi
         ports:
         - containerPort: 80
-        volumeMounts:
-        - mountPath: "/usr/share/nginx/html"
-          name: task-pv-storage
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-trident
+  name: nginx
 spec:
   ports:
   - port: 80
   selector:
-    app: nginx-trident
+    app: nginx
