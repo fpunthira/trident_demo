@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "storageDriverName": "ontap-nas",
+    "backendName": "customBackendName02",
+    "managementLIF": "10.202.3.201",
+    "dataLIF": "10.202.3.203",
+    "svm": "svm-a01",
+    "username": "admin",
+    "password": "NetApp123!",
+    "defaults": {
+        "spaceReserve": "volume",
+        "exportPolicy": "test"
+    }
+}
