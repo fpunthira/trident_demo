@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: nginx-trident
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: nginx-trident
@@ -17,7 +17,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: nginx-trident
-        image: nginx
+        image: nginx:1.16
         resources:
           requests:
             cpu: 100m
@@ -27,8 +27,7 @@ spec:
             memory: 256Mi
         ports:
         - containerPort: 80
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+
 ---
 apiVersion: v1
 kind: Service

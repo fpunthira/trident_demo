@@ -2,9 +2,9 @@
     "version": 1,
     "storageDriverName": "ontap-nas",
     "backendName": "customBackendName",
-    "managementLIF": "10.0.0.109",
-    "dataLIF": "10.0.0.186",
-    "svm": "svm_demo_cvo01",
-    "username": "vsadmin",
-    "password": "Netapp1!"
+    "managementLIF": "10.202.3.201",
+    "dataLIF": "10.202.3.202",
+    "svm": "svm-a01",
+    "username": "admin",
+    "password": "NetApp123!"
 }
