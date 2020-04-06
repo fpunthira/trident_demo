@@ -16,7 +16,7 @@ spec:
       volumes:
       - name: task-pv-storage
         persistentVolumeClaim:
-          claimName: basic
+          claimName: basic-san
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
