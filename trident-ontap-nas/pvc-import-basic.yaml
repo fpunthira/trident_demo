@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: basic
+  storageClassName: basic-csi
 
 
   #### tridentctl import volume BackendForNasCvoDR trident_pvc_707f6da4_35f5_40b9_a7a6_480dc3be662d_clone -f pvc-import.yaml -n trident
