@@ -3,11 +3,11 @@ apiVersion: v1
 metadata:
   name: basic
   annotations:
-    volume.beta.kubernetes.io/storage-class: basic
+    volume.beta.kubernetes.io/storage-class: basic-csi
     trident.netapp.io/exportPolicy: "test"
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Gi
