@@ -9,6 +9,6 @@
     "password": "NetApp123!",
     "defaults": {
         "spaceReserve": "volume",
-        "exportPolicy": "myk8scluster"
+        "exportPolicy": "test"
     }
 }
