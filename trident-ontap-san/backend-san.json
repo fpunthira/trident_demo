@@ -1,11 +1,11 @@
 {
     "version": 1,
     "storageDriverName": "ontap-san",
-    "backendName": "ontap-san-backend-02",
-    "managementLIF": "10.0.0.240",
-    "dataLIF": "10.0.0.7",
-    "svm": "svm_demo_cvo01",
+    "backendName": "ontap-san-backend",
+    "managementLIF": "10.202.3.201",
+    "dataLIF": "10.202.3.203",
+    "svm": "svm-a01",
     "igroupName": "trident",
     "username": "admin",
-    "password": "Netapp1!"
+    "password": "NetApp123!"
 }
