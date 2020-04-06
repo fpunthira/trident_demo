@@ -3,7 +3,6 @@
     "storageDriverName": "ontap-san",
     "backendName": "ontap-san-backend",
     "managementLIF": "10.202.3.201",
-    "dataLIF": "10.202.3.203",
     "svm": "svm-a01",
     "igroupName": "trident",
     "username": "admin",
