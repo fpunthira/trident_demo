@@ -6,5 +6,9 @@
     "dataLIF": "10.202.3.202",
     "svm": "svm-a01",
     "username": "admin",
-    "password": "NetApp123!"
+    "password": "NetApp123!",
+    "defaults": {
+        "spaceReserve": "volume",
+        "exportPolicy": "myk8scluster"
+    }
 }
