@@ -6,7 +6,7 @@
     "dataLIF": "172.18.0.9",
     "svm": "svm_gcpcvo",
     "username": "admin",
-    "password": "NetApp123!",
+    "password": "Netapp1!",
     "defaults": {
         "spaceReserve": "volume",
         "exportPolicy": "export-svm_gcpcvo-vol"
