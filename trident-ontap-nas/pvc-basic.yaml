@@ -4,7 +4,6 @@ metadata:
   name: basic
   annotations:
     volume.beta.kubernetes.io/storage-class: basic-csi
-    trident.netapp.io/exportPolicy: "test"
 spec:
   accessModes:
     - ReadWriteMany
