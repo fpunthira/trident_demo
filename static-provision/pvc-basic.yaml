@@ -2,8 +2,6 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pvc-local-storage
-  annotations:
-    volume.beta.kubernetes.io/storage-class: local-storage
 spec:
   accessModes:
     - ReadWriteMany
