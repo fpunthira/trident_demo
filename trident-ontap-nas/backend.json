@@ -1,14 +1,14 @@
 {
     "version": 1,
     "storageDriverName": "ontap-nas",
-    "backendName": "customBackendName",
-    "managementLIF": "10.202.3.201",
-    "dataLIF": "10.202.3.202",
-    "svm": "svm-a01",
+    "backendName": "ontap-nas-backend",
+    "managementLIF": "172.18.0.4",
+    "dataLIF": "172.18.0.9",
+    "svm": "svm_gcpcvo",
     "username": "admin",
     "password": "NetApp123!",
     "defaults": {
         "spaceReserve": "volume",
-        "exportPolicy": "test"
+        "exportPolicy": "export-svm_gcpcvo-vol"
     }
 }
