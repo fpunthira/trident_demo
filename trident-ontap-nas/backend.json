@@ -3,7 +3,6 @@
     "storageDriverName": "ontap-nas",
     "backendName": "ontap-nas-backend",
     "managementLIF": "172.18.0.4",
-    "dataLIF": "172.18.0.9",
     "svm": "svm_gcpcvo",
     "username": "admin",
     "password": "Netapp1!",

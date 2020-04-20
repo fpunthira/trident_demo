@@ -1,13 +1,13 @@
 {
     "version": 1,
     "storageDriverName": "ontap-nas",
-    "backendName": "customBackendName02",
-    "managementLIF": "10.202.3.201",
-    "svm": "svm-a01",
+    "backendName": "ontap-nas-backend-dr",
+    "managementLIF": "172.16.1.5",
+    "svm": "svm_AZURECVO",
     "username": "admin",
-    "password": "NetApp123!",
+    "password": "Netapp1!",
     "defaults": {
         "spaceReserve": "volume",
-        "exportPolicy": "test"
+        "exportPolicy": "export-svm_AZURECVO-vol"
     }
 }
