@@ -7,3 +7,12 @@ tar -xf trident-installer-20.01.0.tar.gz
 cd trident-installer
 
 ls -la
+
+
+faskjdflkasdnfkmas
+dfasd
+f
+asdf
+asd
+f
+ad
