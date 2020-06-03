@@ -2,9 +2,9 @@
     "version": 1,
     "storageDriverName": "ontap-san",
     "backendName": "ontap-san-backend",
-    "managementLIF": "10.202.3.201",
-    "svm": "svm-a01",
+    "managementLIF": "172.16.1.4",
+    "svm": "svm-AZURECVOHA",
     "igroupName": "trident",
     "username": "admin",
-    "password": "NetApp123!"
+    "password": "Netapp1!!"
 }

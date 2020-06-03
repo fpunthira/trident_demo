@@ -13,3 +13,4 @@ spec:
     name: pvc1-snap
     kind: VolumeSnapshot
     apiGroup: snapshot.storage.k8s.io
+ 
