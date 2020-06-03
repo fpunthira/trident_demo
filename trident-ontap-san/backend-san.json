@@ -3,6 +3,7 @@
     "storageDriverName": "ontap-san",
     "backendName": "ontap-san-backend",
     "managementLIF": "172.16.1.4",
+    "dataLIF": "172.16.1.13",
     "svm": "svm_AZURECVOHA",
     "igroupName": "trident",
     "username": "admin",
