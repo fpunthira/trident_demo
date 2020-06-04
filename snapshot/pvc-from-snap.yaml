@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: storage-class-nas
+  storageClassName: basic-csi-san
   resources:
     requests:
       storage: 1Gi
