@@ -1,12 +1,13 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: basic
+  name: clone-from
   annotations:
-    volume.beta.kubernetes.io/storage-class: basic-csi
+    volume.beta.kubernetes.io/storage-class: basic-csi-san
+    trident.netapp.io/cloneFromPVC: www-web-2
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
