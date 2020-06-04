@@ -43,7 +43,7 @@ spec:
   - metadata:
       name: www
       annotations:
-        volume.beta.kubernetes.io/storage-class: storage-class-nas
+        volume.beta.kubernetes.io/storage-class: basic-csi
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
