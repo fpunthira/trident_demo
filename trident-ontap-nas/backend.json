@@ -8,6 +8,6 @@
     "password": "Netapp1!",
     "defaults": {
         "spaceReserve": "volume",
-        "exportPolicy": "export-svm_AZURECVO-vol"
+        "exportPolicy": "trident"
     }
 }
