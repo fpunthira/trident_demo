@@ -7,5 +7,5 @@ metadata:
 provisioner: csi.trident.netapp.io
 parameters:
   backendType: "ontap-nas"
-allowVolumeExpansion: true
+allowVolumeExpansion: trued
 reclaimPolicy: Delete

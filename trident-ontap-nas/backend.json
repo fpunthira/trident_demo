@@ -3,6 +3,7 @@
     "storageDriverName": "ontap-nas",
     "backendName": "ontap-nas-backend",
     "managementLIF": "172.19.199.62",
+    "dataLIF": "172.19.199.111",
     "svm": "svm_dev_a",
     "username": "admin",
     "password": "True1234!",
