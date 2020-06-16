@@ -1,9 +1,9 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: basic-csi-san
+  name: csi-san-gold
 provisioner: csi.trident.netapp.io
 parameters:
-  backendType: "ontap-san"
+  storagePools: "ontap-aff-san-backend:aggr1"
 allowVolumeExpansion: True
 reclaimPolicy: Delete
